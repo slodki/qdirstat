@@ -1,3 +1,256 @@
+qdirstat (1.4-1) zesty; urgency=medium
+
+  [ Bernhard Walle ]
+
+  * Add an app icon for macOS
+  * Add default applications for macOS
+  * Improve the main window toolbar look and feel on macOS
+  * mountPoint: Fix crash on macOS
+
+  [ NHellFire ]
+
+  * Fix compilation failure with qt4 after bf8655
+  * Show error message if display can't be opened for qt4
+
+  [ Stefan Hundhammer ]
+
+  * Version bump for future development
+  * Dropping PacMan for good
+  * Ignore auto-generated stuff
+  * Added Btrfs warning
+  * Fixed GitHub issue #40: Crash without useful error message if display
+    can't be opened
+  * Updated doc
+  * Formatting
+  * Added new class for mount point handling
+  * Removed excessive logging
+  * Compare device names when checking mount points (GitHub issue #39)
+  * Change log
+  * More consistent log output
+  * Better logging
+  * Also check device names at mount points (GitHub issue #39)
+  * Change log
+  * Markdown formatting
+  * Tone down warning
+  * Merge pull request #41 from bwalle/macos
+  * Change log
+  * doc fix
+  * Added build for Leap 42.2
+  * Updated reference to latest stable release
+  * New release: 1.2
+  * Post-release version bump
+  * Merge pull request #43 from NHellFire/qt4-fixes
+  * Better readable Qt4 vs. Qt5 logger
+  * Updated documentation
+  * Skeleton for file type stats
+  * First file type stats
+  * First very crude file type stats output
+  * Fixed wrong percentage dimension
+  * Disabled too verbose logging
+  * Factored file type stats out of window class
+  * Moved ugly Qt version #ifdefs to #defines
+  * Use QTreeWidget for file type stats
+  * Set relevance threshold to 50k
+  * Fixed sorting by total size (int overflow)
+  * Use bold font for categories in file type stats
+  * Consistent #define for NO_SUFFIX
+  * Use only top 20 items below category <other>
+  * Fixed docs
+  * Use correct iterator
+  * Code cleanup
+  * Merge pull request #47 from shundhammer/huha-extension-stats
+  * New screenshot
+  * Updated change log
+  * Fixed Qt uic duplicate name warnings caused by Qt Designer
+  * Smaller screenshots on main page
+  * Link to screenshots page
+  * Use real images, not resized-to-death versions
+  * Use real images, not resized-to-death versions
+  * Moved troubleshooting section out to separate document
+  * Moved most docs to doc directory
+  * Added separate docs for the very clueless and very hasty
+  * doc update
+  * Added online help via external browser (xdg-open)
+  * New link
+  * Added doc/*.md files
+  * Fixed full path for -l
+  * New doc
+  * Prepare file type stats window for locating types
+  * First 'Locate Files' window that does anything useful
+  * File type selection (GitHub issue #48)
+  * New screenshots and documentation
+  * Fixed URL to get the real full-size image, not the downsized-to-death
+    one
+  * Make F3 an app-wide toggle
+  * Less drastic handling of double-clicking on NO_SUFFIX
+  * Save and restore window position and size
+  * Use new common window pos/size functions
+  * Fixed int overflow (GitHub issue #55)
+  * Fixed segfault while refreshing after cleanup (GitHub issue #54
+  * Doc for latest contribution
+  * Doc for latest contribution
+  * Merge branch 'master' of github.com:shundhammer/qdirstat
+  * Documented GitHub workflow
+  * Clearer wording
+  * Added links
+  * Added new doc to latest news
+  * Fixed wrong default
+  * Code formatting
+  * Prevent overwriting busy flag
+  * New doc
+  * Fixed subdirs in tree view getting out of sync during reading (GitHub
+    issue #24)
+  * Change log
+  * Added [Refresh] button to both new dialogs
+  * Whitespace cleanup
+  * Rotate log and use separate own log dir with perm 0700
+  * Change log
+  * doc improvements
+  * Better error formatting
+  * Prevent crash when deleting root item via cleanup
+  * Display path and size in status line upon hover on treemap tile (GitHub
+    issue #30)
+  * Change log
+  * Fixed wrong URL
+  * New release: V1.3
+  * Post-release version bump
+  * Added SLE-12 SP2
+  * Fixed broken Qt4 build
+  * wording
+  * Fixed non-cushioned treemap display
+  * Use a gradient for directory treemap tiles (GitHub issue #58)
+  * Fixed markdown
+  * Limit dir gradient to min tile size
+  * Markdown formatting
+  * Fixed markdown formatting
+  * Fixed screenshot page after GitHub fucked up markdown rendering
+  * Fixed more hyperlinks after GitHub fucked up markdown parsing
+  * Fixed even more hyperlinks after GitHub fucked up markdown parsing
+  * Fixed even more hyperlinks after GitHub fucked up markdown parsing
+  * First StatsCollector that compiles
+  * Class rename
+  * First working (albeit crude) file size stats
+  * Prevent division by zero
+  * Implemented generic quantiles
+  * Use entire tree for file size stats if nothing is selected
+  * Quantile tables
+  * Restored widget defaults after Qt designer fucked them up
+  * Tweaked percentile table
+  * First HistogramView that compiles
+  * First usable histogram
+  * Lift restrictions on small data size
+  * React to mouse events
+  * Show value in log upon click
+  * First quantile markers
+  * Code cleanup
+  * Added Y axis label
+  * Added X axis label
+  * Added X axis scale
+  * Correct alignment
+  * Auto-scale
+  * Added axes
+  * Added tooltips and fixed redraw problems
+  * Added ordinary percentile markers
+  * Added numeric output to histogram
+  * Added text for total sum of files
+  * Prevent crash through exceptions in pathological cases
+  * Suppress quantiles if no data
+  * Factored out delayed rebuilding to separate class
+  * First usable auto-resize
+  * Fit height as well as width upon resize
+  * Less debug logging
+  * Moved generic Qt types stream output to Logger
+  * Moved Qt4 compat stuff out to separate header file
+  * Prefer qMax()/qMin() over std::max() / std::min()
+  * Handle percentile sums
+  * Whitespace and headers consistency
+  * Reasonable column width in table
+  * Added missing translation markers
+  * Refactored populating the percentile table
+  * First overflow panel
+  * The fucking pie finally rotates correctly
+  * First working cutoff panel
+  * Refactored too long addOverflowRight() function
+  * Failed attempt to force display of tooltip
+  * Interactive histogram options
+  * Better geometry management
+  * Provide new data after range change
+  * Check log scale after buckets are filled, not before
+  * Show file size stats from file type stats window
+  * compare suffix case-insensitive
+  * Unified overflow panels to have only one on the right
+  * No margin percentile markers inside Q1..Q3
+  * Added buckets table
+  * Tweaked buckets table
+  * Less debug logging + margin for vertical buckets header
+  * New document explaining statistics basics
+  * Infrastructure for showing help
+  * Statistics documentation
+  * New screenshots for file size statistics
+  * Navigation
+  * Histogram intro
+  * Added statistics docs
+  * Small doc fixes
+  * Doc fixes
+  * More meaningful name
+  * Change log
+  * Small doc fixes
+  * Clearer wording
+  * Modularized class
+  * File type stats for any dir, not just root
+  * Locate file types restricted to subdir
+  * Consistently use separate heading and heading capitalization
+  * Don't rely on FileInfo pointers with limited lifetime
+  * Change log
+  * Factored safe subtree handling out to separate class
+  * Added coverity link
+  * typo
+  * [Coverity] Removed dead code
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added missing member initialization
+  * [Coverity] Added null pointer check
+  * [Coverity] Added null pointer check
+  * [Coverity] Added null pointer check
+  * [Coverity] Prevent possible access to freed object
+  * [Coverity] Added null pointer check
+  * [Coverity] Added null pointer check
+  * Show coverity status on project README.md
+  * [Coverity] Make sure not to throw DynamicCastExceptions in dtors
+  * [Coverity] Document unreached code
+  * [Coverity] Added null pointer check
+  * [Coverity] Added null pointer check
+  * [Coverity] Explicitly ignore function return value
+  * Documented latest changes
+  * Fixed broken UTF-8 file/dir names (GitHub issue #61)
+  * Change log
+  * Fixed markdown format
+  * Merge pull request #62 from slodki/utf8
+  * Simplified strerror() handling
+  * Log QDirStat and Qt version
+  * Added Qt version warning
+  * Check dir exec + read permissions before reading
+  * Version bump and change log
+
+  [ Tomasz Słodkowicz ]
+
+  * fix UTF-8 in error messages
+
+  [ flurbius ]
+
+  * Added option to change the main window splitter orientation (PR #49)
+
+  [ Nathan Rennie-Waldock ]
+  
+  * New upstream release
+
+ -- Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>  Sun, 04 Jun 2017 20:26:01 +0100
+
 qdirstat (0.86~beta1-1~precise) precise; urgency=low
 
   * Initial release.

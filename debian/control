@@ -2,7 +2,7 @@ Source: qdirstat
 Maintainer: Nathan Rennie-Waldock <nathan.renniewaldock@gmail.com>
 Section: utils
 Priority: extra
-Build-Depends: debhelper (>= 8), zlib1g-dev, libqt5-dev | libqt4-dev
+Build-Depends: debhelper (>= 8), zlib1g-dev, libqt5-dev | qtbase5-dev | libqt4-dev
 Homepage: https://github.com/shundhammer/qdirstat
 
 Package: qdirstat
